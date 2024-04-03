@@ -11,7 +11,7 @@ const Home = () => {
     let lastTasks = [];
 
     useEffect(() => {
-        if (allTasksString.length > 0) {
+        if (allTasksString && allTasksString.length > 0) {
             lastTasks = JSON.parse(allTasksString);
             if (lastTasks.length > 5) {
                 setAllTasks(lastTasks.slice(lastTasks.length - 5, lastTasks.length))

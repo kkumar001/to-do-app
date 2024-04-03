@@ -12,7 +12,7 @@ const AllTasks = () => {
     let allTasks = [];
 
     useEffect(() => {
-        if (allTasksString.length > 0) {
+        if (allTasksString && allTasksString.length > 0) {
             allTasks = JSON.parse(allTasksString);
             setCompletedTasks(allTasks.filter(task => task.task_status === 'complete'));
             setUncompletedTasks(allTasks.filter(task => task.task_status === 'uncomplete'));
